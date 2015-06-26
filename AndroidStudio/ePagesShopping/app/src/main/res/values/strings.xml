@@ -1,0 +1,24 @@
+<resources>
+    <!--name of the app-->
+    <string name="app_name">ePagesShopping</string>
+
+    <!--welcome message-->
+    <string name="welcome">
+Herzlich willkommen in der ePages Shopping App.
+Tragen sie bitte hier die URL des ePages Shops den sie besuchen möchten.
+    </string>
+
+    <!--personal comment-->
+    <string name="start_shopping">
+Willkommen bei %1$s. Viel Vergn&#252;gen bei ihrem online Einkauf.
+    </string>
+
+    <!--button label-->
+    <string name="next">Weiter</string>
+    <string name="done">Fertig</string>
+
+    <string name="url">www.your-favourite-epages-shop.com</string>
+
+    <!--generated-->
+    <string name="action_settings">Settings</string>
+</resources>
