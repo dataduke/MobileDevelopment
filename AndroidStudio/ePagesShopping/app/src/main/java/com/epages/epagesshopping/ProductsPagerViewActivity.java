@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -33,14 +34,23 @@ public class ProductsPagerViewActivity extends ActionBarActivity {
         pager.setAdapter(pageAdapter);
 
     }
+
+    //placeholder
+    JSONObject testJSONObject;
+
     //get fragments for view pager object
     private List<Fragment> getFragments(){
         List<Fragment> fList = new ArrayList<Fragment>();
 
-        //TODO: get products with rest count results and create fragments with JSON object content
-        JSONObject testJSONObject = new JSONObject("{\"name\":\"test product 123\",\"id\":\"1234567\"}");
+        //build json object
+        try{
+            //TODO: get products with rest count results and create fragments with JSON object content
+            testJSONObject = new JSONObject("{\"name\":\"test product 123\",\"id\":\"1234567\"}");
+        } catch (JSONException e) {
+            //some exception handler code.
+        }
 
-        //fList.add(FirstFragment.newInstance(0, "Page # 1 with seperate fragment class"));
+    //fList.add(FirstFragment.newInstance(0, "Page # 1 with seperate fragment class"));
         fList.add(ProductsPagerViewFragment.newInstance(testJSONObject));
         fList.add(ProductsPagerViewFragment.newInstance(testJSONObject));
         fList.add(ProductsPagerViewFragment.newInstance(testJSONObject));

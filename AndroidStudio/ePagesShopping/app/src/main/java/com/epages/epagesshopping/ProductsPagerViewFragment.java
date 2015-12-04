@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ProductsPagerViewFragment extends Fragment {
@@ -17,7 +18,14 @@ public class ProductsPagerViewFragment extends Fragment {
     {
         ProductsPagerViewFragment f = new ProductsPagerViewFragment();
         Bundle bdl = new Bundle(1);
-        bdl.putString(PRODUCT_NAME, ePagesJSONProduct.getString("name"));
+
+        //build json object
+        try {
+            bdl.putString(PRODUCT_NAME, ePagesJSONProduct.getString("name"));
+        } catch (JSONException e) {
+            //some exception handler code.
+        }
+
         f.setArguments(bdl);
         return f;
     }
