@@ -27,7 +27,7 @@ public class ProductsPagerViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         String message = getArguments().getString(PRODUCT_NAME);
         View v = inflater.inflate(R.layout.products_pager_view_fragment, container, false);
-        TextView messageTextView = (TextView)v.findViewById(R.id.productsPagerViewProductName);
+        TextView messageTextView = (TextView)v.findViewById(R.id.product_pager_view_fragment_product_name);
         messageTextView.setText(message);
 
         return v;

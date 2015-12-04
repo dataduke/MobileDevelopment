@@ -29,7 +29,7 @@ public class ProductsPagerViewActivity extends ActionBarActivity {
 
         pageAdapter = new MyPageAdapter(getSupportFragmentManager(), fragments);
 
-        ViewPager pager = (ViewPager)findViewById(R.id.viewpager);
+        ViewPager pager = (ViewPager)findViewById(R.id.product_pager_view);
         pager.setAdapter(pageAdapter);
 
     }
